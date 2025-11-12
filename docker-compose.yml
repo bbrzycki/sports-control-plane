@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  sports-control-plane:
+    build: .
+    image: sports-control-plane:latest
+    ports:
+      - "9000:9000"
+    networks:
+      - default
+
+networks:
+  default:
+    name: sports_net
+    external: true
